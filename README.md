@@ -1,5 +1,5 @@
-# r_code
-R code
+# diagonal_cut_histograms
+R code to generate diagonal cut histograms. 
 #### dhist.r
 R code for diagonal cut histograms
 #### dhist.ado
