@@ -7,7 +7,7 @@ dhist<-function(x, a=5*iqr(x),
 
 #x is the data
 #a is the scaling factor, default is 5 * IQR
-# nbins is the number of bins, default is assigned by the Sturges method
+# nbins is the number of bins, default is assigned by the Stuges method
 #rx is the range used for the left of the left-most bin to the right of the
 #	right-most bin 
 #xlab is label for the x axis
