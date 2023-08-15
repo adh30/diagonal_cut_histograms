@@ -1,0 +1,112 @@
+%&latex
+\documentclass{jcgsf}
+
+\setcounter{year}{2008}
+
+\usepackage{url}
+\def\UrlFont{\it}
+
+
+\title{Variations on the histogram}
+
+
+\author{Lorraine Denby and Colin Mallows \thanks{
+Lorraine Denby is a Research Scientist and Colin Mallows is
+a Consultant in the Data Analysis Research Department at Avaya Labs}}
+
+\frenchspacing
+\raggedbottom
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+It is usual to choose to make the bars in a histogram all have the same
+width.  One could also choose to make them all have the same area.  These two
+options have complementary strengths and weaknesses;  the equal-width
+histogram oversmooths in regions of high density, and is poor at
+identifying sharp peaks; the equal-area histogram oversmooths in regions
+of low density, and so does not identify outliers.  We describe
+a compromise approach which avoids both of these defects.
+We regard the histogram as an exploratory device, rather than as an estimate
+of a density.  We argue that relying on the asymptotics of
+Integrated Mean Square Error
+leads to inappropriate recommendations for choosing bin-widths.
+
+\begin{keywords}
+Diagonally-cut  histogram; equal-area histogram;  asymptotics;
+IMSE.
+
+\end{keywords}
+\end{abstract}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bigskip
+
+% AUTHOR: Please comment out any sections and/or files that you do not apply to your supplementary materials. You may also add more items, if you will will have more than two files of a particular type.
+
+%AUTHOR: If you have a large number of files, please place them in a .tar or .zip file and comment out the note below. 
+
+%AUTHOR: Please rename this file using your manuscript number with the .tex extension. Then compile this file and mail (1) this .tex file, (2) the compiled .pdf file, and (3) your data files, computer code files, and supplementary documents to david.a.vandyk@gmail.com. Please put your manuscript number in the "Re" line of the e-mail. THANKS!
+
+\centerline{\bf\large Supplementary Materials}
+
+\bigskip
+
+The following files are all contained in the archive {\tt  supplement\_07-004.tar}.
+
+\paragraph{1. Data Sets}
+\begin{description}
+\item[\tt fig2.txt] This data is from
+a Six Sigma quality improvement project.
+The purpose of the study was to reduce the time
+from trouble report to restored service.
+The particular repairs of interest were those
+that needed a technician dispatched
+and could not be fixed remotely.  This file contains 506 
+durations of one step of the process from
+trouble report to service restoration.
+
+\item[\tt fig3.txt] This data is from the Boston Housing data from
+Harrison and Rubinfeld (1978).  This dataset contains information
+collected by the U.S Census Service concerning housing in the
+area of Boston Massachusetts.  It contains
+506 observations and 14 variables. This file contains the 
+PT variable (pupil-teacher ratio by town).
+
+\item[\tt fig4.txt] This is an artificial example, 
+exhibiting both a spike and outliers.
+It is a mixture of three
+distributions:   775 points drawn from a standard Normal distribution,
+150 points of value 7, and 75 points distributed uniformly over the interval
+(0,15).   
+
+\item[\tt fig5.txt] Our final example is drawn from
+a study of round trip time of Voice over IP (VoIP) packets between two
+devices on the data network.  Each observation is the median round
+trip time of 100 packets sent 20 milliseconds apart from a particular
+source and destination device on the network.  One thousand sets of
+packets were sent,
+of which 69 were lost, so 931 remain.
+\end{description}
+
+\paragraph{2. Computer Code}
+\begin{description}
+\item[\tt dhist.r] This is the R function that produces a dhist.  The 
+arguements are explained in the code.
+\item[\tt read.data.R] This reads the 4 data files into R and names them
+appropriately for use in the 4 R source files that produce Figures 2 to 5.
+\item[\tt fig.2.R] This R source file produces Figure 2. Note that these
+source files do not get the character sizes identical to the figures
+in the paper since the figures were produced with S-Plus.
+\item[\tt fig.3.R] This R source file produces Figure 3.
+\item[\tt fig.4.R] This R source file produces Figure 4.
+\item[\tt fig.5.R] This R source file produces Figure 5.
+\end{description}
+
+\end{document}
